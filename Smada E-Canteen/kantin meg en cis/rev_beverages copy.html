@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kantin Beverages</title>
+  <link rel="stylesheet" href="css/cartkantin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alatsi&family=Alexandria:wght@100..900&family=Silkscreen:wght@400;700&display=swap">
+</head>
+
+<body>
+  <div class="main-content">
+    <div class="background">
+        <img src="img/background.png" alt="Background Image" style="width: 100%;height: 100%; object-fit: cover;">
+    </div>
+
+    <header class="header">
+        <div class="left">
+            <div class="logo">SMADA<span>E-CANTEEN</span></div>
+        </div>
+        <h1 class="title">Kantin Food</h1>
+        <div class="right">
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="cart-icon" onclick="toggleKeranjang()">
+        <i class="bi bi-cart"></i>
+        <span id="cart-count" class="cart-badge">0</span>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <div class="content">
+  <h2>Menu Kantin Beverages</h2>
+  <ul id="menu-list">
+    <li>
+      <img src="https://i.pinimg.com/736x/91/1f/22/911f22752088c421c5d35c60bd60896c.jpg" alt="Es Teh">
+      <h1>Es Teh</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Teh', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Teh">0</span>
+        <i onclick="tambahKeKeranjang('Es Teh', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://radarutara.disway.id/upload/9e093525893645cf7787bf06cef52c5f.jpeg" alt="Es Teh Hijau">
+      <h1>Es Teh Hijau</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Teh Hijau', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Teh Hijau">0</span>
+        <i onclick="tambahKeKeranjang('Es Teh Hijau', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://i.pinimg.com/736x/6f/f5/e6/6ff5e611284048aea1c437ebcecfe172.jpg" alt="Es Matcha">
+      <h1>Es Matcha</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Matcha', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Matcha">0</span>
+        <i onclick="tambahKeKeranjang('Es Matcha', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://i.pinimg.com/736x/ed/29/30/ed293047165c7caa03ca3a17cbf24fa4.jpg" alt="Es Lemontea">
+      <h1>Es Lemontea</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Lemontea', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Lemontea">0</span>
+        <i onclick="tambahKeKeranjang('Es Lemontea', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://i.pinimg.com/736x/df/a2/5f/dfa25fa2540fa7eadd8bf7444899bf43.jpg" alt="Es Jeruk">
+      <h1>Es Jeruk</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Jeruk', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Jeruk">0</span>
+        <i onclick="tambahKeKeranjang('Es Jeruk', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/Dw6gfekUcAE1vtQ.jpg:large" alt="Es Anggur">
+      <h1>Es Anggur</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Anggur', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Anggur">0</span>
+        <i onclick="tambahKeKeranjang('Es Anggur', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://i.pinimg.com/736x/0d/7b/58/0d7b582636e32f1a24e653aab54b3636.jpg" alt="Es Mangga">
+      <h1>Es Mangga</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Mangga', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Mangga">0</span>
+        <i onclick="tambahKeKeranjang('Es Mangga', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://i.pinimg.com/736x/e1/e1/60/e1e1602e370f9353db0ef4d18128ffd4.jpg" alt="Es Leci">
+      <h1>Es Leci</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Leci', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Leci">0</span>
+        <i onclick="tambahKeKeranjang('Es Leci', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+    <li>
+      <img src="https://i.pinimg.com/736x/4c/63/a8/4c63a866bd19eca93bad537e2e577480.jpg" alt="Es Joshua">
+      <h1>Es Joshua</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+        <i onclick="kurangiItem('Es Joshua', 3000)">
+          <i class="bi bi-dash-lg"></i>
+        </i>
+        <span id="jumlah-Es Joshua">0</span>
+        <i onclick="tambahKeKeranjang('Es Joshua', 3000)">
+          <i class="bi bi-plus-lg"></i>
+        </i>
+        </div>
+    </li>
+
+    <li>
+      <img src="https://i.pinimg.com/736x/23/5d/9e/235d9e5bf87d476bba4f978c7488e234.jpg" alt="Es Cappucino">
+      <h1>Es Cappucino</h1>
+      <p>Rp3.000</p>
+      <div class="item-controls">
+      <i onclick="kurangiItem('Es Cappucino', 3000)">
+        <i class="bi bi-dash-lg"></i>
+      </i>
+      <span id="jumlah-Es Cappucino">0</span>
+      <i onclick="tambahKeKeranjang('Es Cappucino', 3000)">
+        <i class="bi bi-plus-lg"></i>
+      </i>
+      </div>
+    </li>
+
+    <li>
+    <img src="https://live.staticflickr.com/8012/7180089423_37444b1f49_b.jpg" alt="Es Extrajoss">
+    <h1>Es Extrajoss</h1>
+    <p>Rp3.000</p>
+    <div class="item-controls">
+      <i onclick="kurangiItem('Es Extrajoss', 3000)">
+        <i class="bi bi-dash-lg"></i>
+      </i>
+      <span id="jumlah-Es Extrajoss">0</span>
+      <i onclick="tambahKeKeranjang('Es Extrajoss', 3000)">
+        <i class="bi bi-plus-lg"></i>
+      </i>
+      </div>
+    </li>
+  </li>
+
+  </ul>
+
+  <h3>Keranjang</h3>
+  <div id="keranjang">
+    <ul id="keranjang-list"></ul>
+    <p>Total Belanja: Rp<span id="total">0</span></p>
+    <button onclick="pesanSekarang()">Pesan Sekarang</button>
+    <button onclick="hapusSemua()">Hapus Semua</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html#menu">Kembali ke Beranda</a></li>
+    </ul>
+  </nav>
+
+  <script src="js/cartkantin.js"></script>
+
+</body>
+
+</html>

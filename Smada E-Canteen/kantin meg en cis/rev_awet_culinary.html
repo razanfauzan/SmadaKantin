@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantin Awet Culinary</title>
+    <link rel="stylesheet" href="css/cartkantin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alatsi&family=Alexandria:wght@100..900&family=Silkscreen:wght@400;700&display=swap"> 
+</head>
+<body>
+<div class="main-content">
+    <div class="background">
+        <img src="img/background.png" alt="Background Image" style="width: 100%;height: 100%; object-fit: cover;">
+    </div>
+
+    <header class="header">
+        <div class="left">
+            <div class="logo">SMADA<span>E-CANTEEN</span></div>
+        </div>
+        <h1 class="title">Kantin Awet Culinary</h1>
+        <div class="right">
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="cart-icon" onclick="toggleKeranjang()">
+        <i class="bi bi-cart"></i>
+        <span id="cart-count" class="cart-badge">0</span>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <div class="content">
+                <h2>Menu Kantin</h2>
+            </div>
+
+            <ul id="menu-list">
+                <li>
+                    <img src="https://i1.wp.com/www.dfordelhi.in/wp-content/uploads/2018/01/page_img_sushi_01.jpg?fit=1040%2C654&ssl=1/" alt="Sushi">
+                    <h1>Sushi</h1>
+                    <p>Rp5.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Sushi', 5000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Sushi">0</span>
+                        <i onclick="tambahKeKeranjang('Sushi', 5000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://tugumalang.id/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-06-at-13.26.46.jpeg" alt="Hamburger">
+                    <h1>Hamburger</h1>
+                    <p>Rp3.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Hamburger', 3000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Hamburger">0</span>
+                        <i onclick="tambahKeKeranjang('Hamburger', 3000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://blog.tokowahab.com/wp-content/uploads/2018/08/resep-jasuke.jpg" alt="Jasuke">
+                    <h1>Jasuke</h1>
+                    <p>Rp3.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Jasuke', 3000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Jasuke">0</span>
+                        <i onclick="tambahKeKeranjang('Jasuke', 3000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://cdn.visiteliti.com/article/2023-02/13/3rSxJOvFNm8FlgXarm1m_1676262254.jpeg" alt="Ice Cream Cone">
+                    <h1>Ice Cream Cone</h1>
+                    <p>Rp3.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Ice Cream Cone', 3000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Ice Cream Cone">0</span>
+                        <i onclick="tambahKeKeranjang('Ice Cream Cone', 3000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="keranjang">
+            <h3>Keranjang</h3>
+            <ul id="keranjang-list"></ul>
+            <p>Total Harga: Rp.<span id="total">0</span></p>
+            <div class="pespus">
+                <button onclick="pesanSekarang()">Pesan Sekarang</button>
+                <button onclick="hapusSemua()">Hapus Semua</button>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#menu">Kembali ke Beranda</a></li>
+        </ul>
+    </nav>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 <span>MegEnCis.</span> All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/megencisteam?igsh=MWI3bnl3MzRhNWJ0bw=="><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+    <script src="js/cartkantin.js"></script>
+</body>
+</html>

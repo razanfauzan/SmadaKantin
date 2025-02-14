@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantin Bu Siyam</title>
+    <link rel="stylesheet" href="css/cartkantin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alatsi&family=Alexandria:wght@100..900&family=Silkscreen:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="main-content">
+        <div class="background">
+            <img src="img/background.png" alt="Background Image" style="width: 100%;height: 100%; object-fit: cover;">
+        </div>
+
+        <header class="header">
+            <div class="left">
+                <div class="logo">SMADA<span>E-CANTEEN</span></div>
+            </div>
+            <h1 class="title">Kantin Bu Siyam</h1>
+            <div class="right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="cart-icon" onclick="toggleKeranjang()">
+            <i class="bi bi-cart"></i>
+            <span id="cart-count" class="cart-badge">0</span>
+        </div>
+
+        <div class="container">
+            <div class="menu">
+                <div class="content">
+                    <h2>Menu Kantin Bu Siyam</h2>
+                </div>
+                <ul id="menu-list">
+                    <li>
+                        <img src="https://i.pinimg.com/originals/e3/20/77/e32077057baa98e4fffa4c5abe048379.jpg" alt="Nasi Campur">
+                        <h1>Nasi Campur</h1>
+                        <p>Rp8.000</p>
+                        <div class="item-controls">
+                            <i onclick="kurangiItem('Nasi Campur', 8000)" class="bi bi-dash-lg"></i>
+                            <span id="jumlah-Nasi Campur">0</span>
+                            <i onclick="tambahKeKeranjang('Nasi Campur', 8000)" class="bi bi-plus-lg"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/80/82/f9/8082f92fb214227242be7e22cc39145b.jpg" alt="Mie Instant Goreng">
+                        <h1>Mie Instant Goreng</h1>
+                        <p>Rp5.000</p>
+                        <div class="item-controls">
+                            <i onclick="kurangiItem('Mie Instant Goreng', 5000)" class="bi bi-dash-lg"></i>
+                            <span id="jumlah-Mie Instant Goreng">0</span>
+                            <i onclick="tambahKeKeranjang('Mie Instant Goreng', 5000)" class="bi bi-plus-lg"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/23/20/34/232034c69aecfccd1d3e8337154ecea2.jpg" alt="Mie Instant Kuah">
+                        <h1>Mie Instant Kuah</h1>
+                        <p>Rp5.000</p>
+                        <div class="item-controls">
+                            <i onclick="kurangiItem('Mie Instant Kuah', 5000)" class="bi bi-dash-lg"></i>
+                            <span id="jumlah-Mie Instant Kuah">0</span>
+                            <i onclick="tambahKeKeranjang('Mie Instant Kuah', 5000)" class="bi bi-plus-lg"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/42/cd/fe/42cdfe658c53becfeea931e1a71a6bbe.jpg" alt="Pop Mie Goreng">
+                        <h1>Pop Mie Goreng</h1>
+                        <p>Rp8.000</p>
+                        <div class="item-controls">
+                            <i onclick="kurangiItem('Pop Mie Goreng', 8000)" class="bi bi-dash-lg"></i>
+                            <span id="jumlah-Pop Mie Goreng">0</span>
+                            <i onclick="tambahKeKeranjang('Pop Mie Goreng', 8000)" class="bi bi-plus-lg"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/8a/b7/a7/8ab7a75385bc5cca4ccede531cb1ac96.jpg" alt="Pop Mie Kuah">
+                        <h1>Pop Mie Kuah</h1>
+                        <p>Rp8.000</p>
+                        <div class="item-controls">
+                            <i onclick="kurangiItem('Pop Mie Kuah', 8000)" class="bi bi-dash-lg"></i>
+                            <span id="jumlah-Pop Mie Kuah">0</span>
+                            <i onclick="tambahKeKeranjang('Pop Mie Kuah', 8000)" class="bi bi-plus-lg"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="keranjang">
+                <h3>Keranjang</h3>
+                <ul id="keranjang-list"></ul>
+                <p>Total Harga: Rp.<span id="total">0</span></p>
+                <div class="pespus">
+                    <button onclick="pesanSekarang()">Pesan Sekarang</button>
+                    <button onclick="hapusSemua()">Hapus Semua</button>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#menu">Kembali ke Beranda</a></li>
+            </ul>
+        </nav>
+    </div>
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 <span>MegEnCis.</span> All Rights Reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/megencisteam?igsh=MWI3bnl3MzRhNWJ0bw=="><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    <script src="js/cartkantin.js"></script>
+</body>
+</html>

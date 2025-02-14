@@ -1,0 +1,475 @@
+:root {
+  --blue: rgb(60, 96, 228);
+  --linear: linear-gradient(90deg, #1a73e8, #00bfa5);
+  --abu: rgb(43, 42, 42);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', cursive;
+}
+
+/* Gaya untuk body */
+html, body {
+  height: 100%;
+  background-image: src('img/background.png');
+  text-align: center;
+  padding: 0;
+  padding-top: 70px;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content{
+  flex: 1;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;/* Header menempel di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;;
+  border-radius: 10px;
+  align-items: center;
+  background: rgb(44, 62, 80);
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* Pastikan header di atas elemen lain */
+}
+
+.header .logo {
+  font-size: 24px;
+    font-weight: bold;
+    font-family: 'Alatsi', serif;
+}
+
+.header .logo span {
+  color: var(--blue);
+  font-family: 'Alatsi', serif;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Silkscreen", sans-serif;
+  font-size: 26px;
+  text-align: center;
+}
+.header .left {
+  display: flex;
+  align-items: center;
+}
+
+.header .right {
+  margin-left: auto;
+  /* Dorong elemen lain ke kanan */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+/* Gaya untuk navigasi */
+
+nav{
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  background: #007bff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold; 
+}
+
+nav ul li a:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  /* Menjaga agar elemen sejajar ke atas */
+  justify-content: space-between;
+  /* Pisahkan menu dan keranjang */
+  gap: 20px;
+  /* Beri jarak antar elemen */
+  padding: 20px;
+}
+
+.menu {
+  flex: 1;
+}
+
+/* Style untuk keranjang */
+#keranjang {
+  display: none;
+  width: 300px;
+  height: 100vh;
+  padding: 15px;
+  top: 60px;
+  right: 0px;
+  z-index: 1000;
+  border-radius: 8px;
+  position: fixed;
+  background: rgb(43, 42, 42);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+}
+
+#keranjang.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#cart-icon {
+  position: fixed;
+  top: 70px;
+  right: 5px;
+  background: var(--blue);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#cart-icon:hover {
+  background: var(--linear);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#keranjang h3{
+  color: white;
+  font-family: "Outfit",serif;
+  font-weight: 800;
+  font-size: 40px;
+}
+#keranjang p{
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+#keranjang-list {
+  list-style-type: none;
+}
+
+#keranjang-list li {
+  background: white;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+/* Gaya tombol keranjang */
+#keranjang .pespus button {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#keranjang .pespus button:hover {
+  background: #218838;
+}
+
+/* Gaya tombol hapus */
+button:nth-child(2) {
+  background: #218838;
+}
+
+button:nth-child(2):hover {
+  background: #218838;
+}
+
+.keranjang-item {
+  display: flex;
+  flex-direction: column;
+  /* Susun dalam satu kolom */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item-nama {
+  flex: 2;
+  text-align: left;
+}
+
+.item-harga {
+  flex: 1;
+  text-align: center;
+  color: orangered;
+}
+
+.item-jumlah {
+  flex: 1;
+  text-align: right;
+}
+
+.item-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item-buttons button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+}
+
+.item-buttons button i {
+  pointer-events: none;
+}
+
+.item-buttons button:first-child {
+  background-color: #dc3545;
+}
+
+.item-buttons button:first-child:hover {
+  background-color: #a61e2a;
+}
+
+/*Container menu */ 
+#menu-list {
+  list-style: none;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Maks 1fr per item */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Container menu */
+#menu-list {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#menu-list h1{
+  font-family: "poppins",serif;
+  font-weight: 620;
+  font-size: 20px;
+  margin-top: 15%;
+}
+#menu-list p{
+  font-family: "poppins", serif;
+  margin-top: 5%;
+  font-weight: 560;
+  color:rgb(255, 111, 0);
+}
+
+/* Container untuk tombol +/- dan jumlah */
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Jarak antara tombol */
+  margin-top: 5px;
+}
+.bi-dash-lg::before {
+  content: "\f63b";
+}
+
+.bi-plus-lg::before {
+  content: "\f64d";
+}
+
+.bi::before,[class*=" bi-"]::before,[class^=bi-]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+/* Setiap item menu */
+#menu-list li {
+  background: rgba(21, 21, 21, 0.804);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#menu-list li:hover{
+  transform: scale(1.08);/* Membesar sedikit */
+    box-shadow: 0px 0px 30px var(--blue);/* Efek glow */
+}
+/* gambar menu */
+#menu-list img {
+  width: 180px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.485);
+}
+
+
+
+
+
+/* Tampilan jumlah item */
+#menu-list span {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+
+footer {
+  background: rgb(44, 62, 80);
+  /* Gradasi biru elegan */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container .p{
+  flex-grow: 1;
+    /* Biar teks tetap di tengah */
+    text-align: center;
+}
+
+.footer-container p span{
+color: orange;
+font-weight: 500;
+}
+
+.footer-container .social-icons{
+  margin-right: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: orange;
+  /* Warna emas saat hover */
+}

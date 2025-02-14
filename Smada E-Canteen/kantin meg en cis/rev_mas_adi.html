@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantin Mas Adi</title>
+    <link rel="stylesheet" href="css/cartkantin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alatsi&family=Alexandria:wght@100..900&family=Silkscreen:wght@400;700&display=swap">
+</head>
+<body>
+<div class="main-content">
+    <div class="background">
+        <img src="img/background.png" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="left">
+            <div class="logo">SMADA<span>E-CANTEEN</span></div>
+        </div>
+        <h1 class="title">Kantin Mas Adi</h1>
+        <div class="right">
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Ikon Cart -->
+    <div id="cart-icon" onclick="toggleKeranjang()">
+        <i class="bi bi-cart"></i>
+        <span id="cart-count" class="cart-badge">0</span>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <div class="content">
+                <h2>Menu Kantin Mas Adi</h2>
+            </div>
+            <ul id="menu-list">
+                <li>
+                    <img src="https://img-global.cpcdn.com/recipes/e1ea1e26570d14e6/1200x630cq70/photo.jpg" alt="Kentang Krispy">
+                    <h1>Kentang Krispy</h1>
+                    <p>Rp5.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Kentang Krispy', 5000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Kentang Krispy">0</span>
+                        <i onclick="tambahKeKeranjang('Kentang Krispy', 5000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/originals/76/19/d3/7619d3017a39fe57368dc91c9c12a154.jpg" alt="Cilok">
+                    <h1>Cilok</h1>
+                    <p>Rp5.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Cilok', 5000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Cilok">0</span>
+                        <i onclick="tambahKeKeranjang('Cilok', 5000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://img-global.cpcdn.com/recipes/526c6b6905e1e4f9/680x482cq70/jamur-crispy-renyah-foto-resep-utama.jpg" alt="Jamur Krispy">
+                    <h1>Jamur Krispy</h1>
+                    <p>Rp5.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Jamur Krispy', 5000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Jamur Krispy">0</span>
+                        <i onclick="tambahKeKeranjang('Jamur Krispy', 5000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://akcdn.detik.net.id/community/media/visual/2020/10/12/cimolsumberinstagramcomallsfood.jpeg?w=620&q=90" alt="Cimol">
+                    <h1>Cimol</h1>
+                    <p>Rp5.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Cimol', 5000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Cimol">0</span>
+                        <i onclick="tambahKeKeranjang('Cimol', 5000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2023/02/10/cara-membuat-piscokjpeg-20230210035629.jpeg" alt="Piscok">
+                    <h1>Piscok</h1>
+                    <p>Rp5.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Piscok', 5000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Piscok">0</span>
+                        <i onclick="tambahKeKeranjang('Piscok', 5000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="keranjang">
+            <h3>Keranjang</h3>
+            <ul id="keranjang-list"></ul>
+            <p>Total Harga: Rp.<span id="total">0</span></p>
+            <div class="pespus">
+                <button onclick="pesanSekarang()">Pesan Sekarang</button>
+                <button onclick="hapusSemua()">Hapus Semua</button>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#menu">Kembali ke Beranda</a></li>
+        </ul>
+    </nav>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 <span>MegEnCis.</span> All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/megencisteam?igsh=MWI3bnl3MzRhNWJ0bw=="><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/cartkantin.js"></script>
+</body>
+</html>

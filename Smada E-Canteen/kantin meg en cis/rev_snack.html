@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantin Snack</title>
+    <link rel="stylesheet" href="css/cartkantin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alatsi&family=Alexandria:wght@100..900&family=Silkscreen:wght@400;700&display=swap"> 
+</head>
+<body>
+<div class="main-content">
+    <div class="background">
+        <img src="img/background.png" alt="Background Image" style="width: 100%;height: 100%; object-fit: cover;">
+    </div>
+
+    <header class="header">
+        <div class="left">
+            <div class="logo">SMADA<span>E-CANTEEN</span></div>
+        </div>
+        <h1 class="title">Kantin Snack</h1>
+        <div class="right">
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="cart-icon" onclick="toggleKeranjang()">
+        <i class="bi bi-cart"></i>
+        <span id="cart-count" class="cart-badge">0</span>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <div class="content">
+                <h2>Menu Kantin</h2>
+            </div>
+            <ul id="menu-list">
+                <li>
+                    <img src="https://i.pinimg.com/736x/6c/34/2f/6c342f839bbc156a40a06b9218842cf3.jpg" alt="Makaroni">
+                    <h1>Makaroni</h1>
+                    <p>Rp2.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Makaroni', 2000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Makaroni">0</span>
+                        <i onclick="tambahKeKeranjang('Makaroni', 2000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/b8/0b/1c/b80b1c482613dcc627bca15f907c247b.jpg" alt="Tahu Isi">
+                    <h1>Tahu Isi</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Tahu Isi', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Tahu Isi">0</span>
+                        <i onclick="tambahKeKeranjang('Tahu Isi', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/ee/b8/76/eeb87697a6ae3d87db50f4fe19081092.jpg" alt="Bakwan">
+                    <h1>Bakwan</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Bakwan', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Bakwan">0</span>
+                        <i onclick="tambahKeKeranjang('Bakwan', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/18/95/fe/1895fe8bf41230c2544378b6d08f6c09.jpg" alt="Tahu Fantasi">
+                    <h1>Tahu Fantasi</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Tahu Fantasi', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Tahu Fantasi">0</span>
+                        <i onclick="tambahKeKeranjang('Tahu Fantasi', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/de/2e/6b/de2e6bfa943911be7e8e099048c6aa4b.jpg" alt="Roti Selai Coklat">
+                    <h1>Roti Selai Coklat</h1>
+                    <p>Rp2.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Roti Selai Coklat', 2000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Roti Selai Coklat">0</span>
+                        <i onclick="tambahKeKeranjang('Roti Selai Coklat', 2000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/0e/95/1e/0e951ec90d1518b577fb0245eb7c14c2.jpg" alt="Donat">
+                    <h1>Donat</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Donat', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Donat">0</span>
+                        <i onclick="tambahKeKeranjang('Donat', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/cc/7f/79/cc7f79a04de173754fc65265a23ecd26.jpg" alt="Donat Coklat">
+                    <h1>Donat Coklat</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Donat Coklat', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Donat Coklat">0</span>
+                        <i onclick="tambahKeKeranjang('Donat Coklat', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                <img src="https://img-global.cpcdn.com/recipes/eb6b016dc6711c98/680x482cq70/cangkarok-kerak-nasi-goreng-foto-resep-utama.jpg" alt="Cangkarok">
+                    <h1>Cangkarok</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Cangkarok', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Cangkarok">0</span>
+                        <i onclick="tambahKeKeranjang('Cangkarok', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/204/2024/05/30/2-2421445910.jpg" alt="Gettas">
+                    <h1>Gettas</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Gettas', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Gettas">0</span>
+                        <i onclick="tambahKeKeranjang('Gettas', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                
+                <li>
+                    <img src="https://i.pinimg.com/736x/eb/9e/bd/eb9ebd9334520b143174940fc16437d9.jpg" alt="Terang bulan">
+                    <h1>Terang bulan</h1>
+                    <p>Rp1.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Terang bulan', 1000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Terang bulan">0</span>
+                        <i onclick="tambahKeKeranjang('Terang bulan', 1000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+                
+                <li>
+                    <img src="https://i.pinimg.com/736x/0e/af/e3/0eafe3cdeb7064e7754cbb180219d729.jpg" alt="Risol Mayo">
+                    <h1>Risol Mayo</h1>
+                    <p>Rp3.000</p>
+                    <div class="item-controls">
+                        <i onclick="kurangiItem('Risol Mayo', 3000)" class="bi bi-dash-lg"></i>
+                        <span id="jumlah-Risol Mayo">0</span>
+                        <i onclick="tambahKeKeranjang('Risol Mayo', 3000)" class="bi bi-plus-lg"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="keranjang">
+            <h3>Keranjang</h3>
+            <ul id="keranjang-list"></ul>
+            <p>Total Harga: Rp.<span id="total">0</span></p>
+            <div class="pespus">
+                <button onclick="pesanSekarang()">Pesan Sekarang</button>
+                <button onclick="hapusSemua()">Hapus Semua</button>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#menu">Kembali ke Beranda</a></li>
+        </ul>
+    </nav>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 <span>MegEnCis.</span> All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/megencisteam?igsh=MWI3bnl3MzRhNWJ0bw=="><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+    <script src="js/cartkantin.js"></script>
+</body>
+</html>
